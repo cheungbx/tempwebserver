@@ -1,5 +1,11 @@
 # tempwebserver
-/* ESP8266 plus WEMOS SHT30-D Sensor with a Temperature and Humidity Web Server
+/* 
+This is the adoption of the original web server developed by Mr. David Bird.
+Plus additional instructions for beginners added by Billy Cheung.
+
+Original license info below from Mr. David Bird.
+
+ESP8266 plus WEMOS SHT30-D Sensor with a Temperature and Humidity Web Server
  Automous display of sensor results on a line-chart, gauge view and the ability to export the data via copy/paste for direct input to MS-Excel
  The 'MIT License (MIT) Copyright (c) 2016 by David Bird'. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
  documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, 
