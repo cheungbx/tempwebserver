@@ -1,11 +1,8 @@
-# tempwebserver
 /* 
-This is the adoption of the original web server developed by Mr. David Bird.
-Plus additional instructions for beginners added by Billy Cheung.
-
-Original license info below from Mr. David Bird.
-
-ESP8266 plus WEMOS SHT30-D Sensor with a Temperature and Humidity Web Server
+ *  This is the adoption of the original web server developed by Mr. David Bird. Plus additional instructions for beginners added by Billy Cheung.
+ *  
+ *  
+ *  ESP8266 plus WEMOS SHT30-D Sensor with a Temperature and Humidity Web Server
  Automous display of sensor results on a line-chart, gauge view and the ability to export the data via copy/paste for direct input to MS-Excel
  The 'MIT License (MIT) Copyright (c) 2016 by David Bird'. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
  documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, 
@@ -29,10 +26,8 @@ https://github.com/cheungbx/tempwebserver
 
 All credits to the author Mr. David Bird.
 
-For Adruino IDE set up
-Adruino->Preference->"Additional Boards Manager Url:"-> http://arduino.esp8266.com/stable/package_esp8266com_index.json
-Then exit Arduino and restart to take in the preference.
-
+Hardware setup
+--------------
 
 //    Connect the DHT22  according to the following pin layout.
 //    *** WARNING *** Do not swap VCC (+3V) and Ground (0V), otherwised, the chip will be burnt very quickly.
@@ -57,6 +52,20 @@ Connect your USB cable from your computer to the ESP8266 board. Make sure you us
 Many charging only cable do not have the data pins. 
 Long USB cables > 1.5M  may  not work as the data signals dies out due to the long distance.
 
+Software setup
+--------------
+Adruino->Preference->"Additional Boards Manager Url:", then input http://arduino.esp8266.com/stable/package_esp8266com_index.json
+Then exit Arduino and restart to take in the preference.
+
+Reopen Arduino IDE
+Tools->Borad:Atmega... ->Boards Manager
+Input ESP8266 to search and find the matching board drivers for ESP8266
+Click Install to install.
+
+Tools->Borad->LOLIN（Wemos）D1 R2 & Mini (Appear under the section for ESP8266, will not show up unless you did the preference setting above)
+Tools->Flash size-> "4M (3M SPIFFS)"  (to partition how much flash memory to store the temperature and humidity data. 3M is the max. 1M is the min.)
+Tools->Port:->"/dev/cu......."  - select your serail port used to connect to the ESP8266, if nothing shows up, check your cable or your driver for that USB-Serail port.
+                                  Most ESP ports used the CH340 driver (e.g. Wemos D1 R1) or the CP1201 driver.
 
 
 Reopen Arduino IDE
